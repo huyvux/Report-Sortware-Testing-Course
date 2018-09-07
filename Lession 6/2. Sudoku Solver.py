@@ -110,6 +110,7 @@ def check_sudoku(grid):
             
     num_grid = 9
 	grid_edge = 3
+	
     for idx_grid in range( 0, num_grid ):
         valid_sudoku = {}
         
