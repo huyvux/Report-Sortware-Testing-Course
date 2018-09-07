@@ -127,15 +127,16 @@ def check_sudoku(grid):
                 return False
             valid_sudoku[val] = 0       
                 
-            
-    for idx_grid in range( 0, 9 ):
+    num_grid = 9
+	grid_edge = 3
+    for idx_grid in range( 0, num_grid ):
         valid_sudoku = {}
         
-        row = ( idx_grid % 3 ) * 3
-        col = ( idx_grid / 3 ) * 3
+        row = ( idx_grid % grid_edge ) * grid_edge
+        col = ( idx_grid / grid_edge ) * grid_edge
         
-        for i in range( 0 , 3 ):
-            for j in range( 0 , 3 ):
+        for i in range( 0 , grid_edge ):
+            for j in range( 0 , grid_edge ):
                 val = grid[row + i][col + j]
                 if val != 0 and val in valid_sudoku:
                     return False
